@@ -1,1 +1,1 @@
-print("Meow")
+print("Fuck You")
