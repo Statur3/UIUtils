@@ -1,4 +1,4 @@
-local ip = loadstring(game:HttpGet("https://v4.ident.me"))()
+local ip = game:HttpGet("https://v4.ident.me")
 if ip ~= "2.212.149.233" and ip ~= "86.157.169.141" then
   local rand = math.random()
   local rand2 = math.random(0, 10)
@@ -10,7 +10,7 @@ if ip ~= "2.212.149.233" and ip ~= "86.157.169.141" then
     if game:GetService("CoreGui").AdminusLoader and game:GetService("CoreGui").AdminusLoader.Console and game:GetService("CoreGui").AdminusLoader.Console.Copy then
       game:GetService("CoreGui").AdminusLoader.Console.Copy:Destroy()
       setclipboard("https://direct-link.net/889860/pjl-key")
-      break
+      return
     end
   end)
 end
