@@ -7,10 +7,13 @@ if ip ~= "2.212.149.233" and ip ~= "86.157.169.141" then
   print("Loaded In: "..finalNum.." Seconds")
   
   game:GetService("CoreGui").ChildAdded:Connect(function(Child)
-    if game:GetService("CoreGui").AdminusLoader and game:GetService("CoreGui").AdminusLoader.Console and game:GetService("CoreGui").AdminusLoader.Console.Copy then
-      game:GetService("CoreGui").AdminusLoader.Console.Copy:Destroy()
-      setclipboard("https://direct-link.net/889860/pjl-key")
-      return
+    if Child.Name == "AdminusLoader" then
+        local Console = Child:WaitForChild("Console")
+        local Copy = Console:WaitForChild("Copy")
+        Copy:Destroy()
+
+        setclipboard("https://direct-link.net/889860/pjl-key")
+        return
     end
   end)
 end
