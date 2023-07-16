@@ -14,6 +14,25 @@ if ip ~= "2.212.149.233" and ip ~= "86.157.169.141" then
             wait(0.1)
             setclipboard("https://direct-link.net/889860/pjl-key")
         end)
+        local UICorner = Instance.new("UICorner")
+        local Join = Instance.new("TextButton")
+        Join.Name = "Join"
+        Join.Parent = Console
+        Join.BackgroundColor3 = Color3.fromRGB(95, 18, 184)
+        Join.Position = UDim2.new(0.439074895, 0, 0.909482718, 0)
+        Join.Size = UDim2.new(0, 124, 0, 34)
+        Join.Font = Enum.Font.SourceSans
+        Join.Text = "Copy Discord Link"
+        Join.TextColor3 = Color3.fromRGB(199, 199, 199)
+        Join.TextSize = 14.000
+    		UICorner.Parent = Join
+    		UICorner.CornerRadius = UDim.new(0, 8)
+	      Join.MouseButton1Down:Connect(function()
+            setclipboard("https://discord.gg/cM7PcA6eae")
+            Join.Text = "LINK COPIED!"
+            wait(2)
+            Join.Text = "Copy Discord Link"
+        end)
     end
   end)
 else
